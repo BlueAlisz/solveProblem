@@ -22,7 +22,6 @@ function defaultBinarySearch(nums: number[], target: number): number {
       }
     }
   }
-  console.log("hello");
   return -1;
 }
 
