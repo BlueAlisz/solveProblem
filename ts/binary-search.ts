@@ -49,10 +49,10 @@ function recursiveFunc(
   }
 
   if (nums[mid] > target) {
-    return recursiveFunc(nums, target, start, mid + 1);
+    return recursiveFunc(nums, target, start, mid - 1);
   } else {
     return recursiveFunc(nums, target, mid + 1, end);
   }
 }
 
-console.log(improveBinarySearch([1,5,10,25,30], 25))
+console.log(improveBinarySearch([1,5,10,25,30], 5))
