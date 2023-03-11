@@ -1,4 +1,4 @@
-function binlarySearch(nums: number[], target: number): number {
+function binarySearch(nums: number[], target: number): number {
     let start = 0;
     let end = nums.length - 1;
 
@@ -26,4 +26,4 @@ function binlarySearch(nums: number[], target: number): number {
     return -1;
 }
 
-//binarySearch([15,58,96], 58)
+binarySearch([15,58,96], 0)

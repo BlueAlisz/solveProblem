@@ -1,4 +1,4 @@
-function binlarySearch(nums, target) {
+function binarySearch(nums, target) {
     var start = 0;
     var end = nums.length - 1;
     while (start <= end) {
@@ -26,4 +26,4 @@ function binlarySearch(nums, target) {
     console.log("hello");
     return -1;
 }
-//binarySearch([15,58,96], 58)
+binarySearch([15, 58, 96], 0);
