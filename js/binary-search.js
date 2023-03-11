@@ -1,4 +1,4 @@
-function binarySearch(nums, target) {
+function defaultBinarySearch(nums, target) {
     var start = 0;
     var end = nums.length - 1;
     while (start <= end) {
@@ -26,4 +26,24 @@ function binarySearch(nums, target) {
     console.log("hello");
     return -1;
 }
-binarySearch([15, 58, 96], 0);
+function improveBinarySearch(nums, target) {
+    var start = 0;
+    var end = nums.length - 1;
+    return recursiveFunc(nums, target, start, end);
+}
+function recursiveFunc(nums, target, start, end) {
+    var mid = Math.floor((start + end) / 2);
+    if (nums[mid] === target) {
+        return mid;
+    }
+    if (start > end) {
+        return -1;
+    }
+    if (nums[mid] > target) {
+        return recursiveFunc(nums, target, start, mid + 1);
+    }
+    else {
+        return recursiveFunc(nums, target, mid + 1, end);
+    }
+}
+console.log(improveBinarySearch([1, 5, 10, 25, 30], 25));
