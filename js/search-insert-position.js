@@ -1,11 +1,11 @@
 //use binary search
 function insertBinarySearch(nums, target) {
-    var start = 0;
-    var end = nums.length - 1;
+    let start = 0;
+    let end = nums.length - 1;
     return insertBinarySearchRecursiveFunc(nums, target, start, end);
 }
 function insertBinarySearchRecursiveFunc(nums, target, start, end) {
-    var mid = Math.floor((start + end) / 2);
+    let mid = Math.floor((start + end) / 2);
     if (nums[mid] === target) {
         return mid;
     }

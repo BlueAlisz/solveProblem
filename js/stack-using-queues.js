@@ -1,32 +1,31 @@
-var MyStack = /** @class */ (function () {
-    function MyStack() {
+class MyStack {
+    constructor() {
         this.queue = [];
         this.topElement = undefined;
     }
-    MyStack.prototype.push = function (x) {
+    push(x) {
         this.queue.push(x);
         this.topElement = x;
-    };
-    MyStack.prototype.pop = function () {
-        var size = this.queue.length;
-        for (var i = 0; i < size - 1; i++) {
-            var element = this.queue.shift();
+    }
+    pop() {
+        const size = this.queue.length;
+        for (let i = 0; i < size - 1; i++) {
+            const element = this.queue.shift();
             if (element !== undefined) {
                 this.queue.push(element);
                 this.topElement = element;
             }
         }
         return this.queue.shift();
-    };
-    MyStack.prototype.top = function () {
+    }
+    top() {
         return this.topElement;
-    };
-    MyStack.prototype.empty = function () {
+    }
+    empty() {
         return this.topElement === undefined;
-    };
-    return MyStack;
-}());
-var stack = new MyStack();
+    }
+}
+const stack = new MyStack();
 stack.push(1);
 stack.push(2);
 stack.push(3);

@@ -1,17 +1,16 @@
-var ListNode = /** @class */ (function () {
-    function ListNode(val, next) {
+class ListNode {
+    constructor(val, next) {
         this.val = val === undefined ? 0 : val;
         this.next = next === undefined ? null : next;
     }
-    return ListNode;
-}());
+}
 function deleteDuplicates(head) {
     if (!head)
         return null;
     if (!head.next)
         return head;
-    var prev = head;
-    var curr = head.next;
+    let prev = head;
+    let curr = head.next;
     while (curr) {
         while (curr && curr.val === prev.val) {
             curr = curr.next;
@@ -25,11 +24,11 @@ function deleteDuplicates(head) {
     }
     return head;
 }
-var node1 = new ListNode(1);
-var node2 = new ListNode(1);
-var node3 = new ListNode(2);
-var node4 = new ListNode(3);
-var node5 = new ListNode(3);
+const node1 = new ListNode(1);
+const node2 = new ListNode(1);
+const node3 = new ListNode(2);
+const node4 = new ListNode(3);
+const node5 = new ListNode(3);
 node1.next = node2;
 node2.next = node3;
 node3.next = node4;

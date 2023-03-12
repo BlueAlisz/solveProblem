@@ -1,8 +1,8 @@
 function defaultBinarySearch(nums, target) {
-    var start = 0;
-    var end = nums.length - 1;
+    let start = 0;
+    let end = nums.length - 1;
     while (start <= end) {
-        var mid = Math.floor((start + end) / 2);
+        let mid = Math.floor((start + end) / 2);
         if (nums[mid] === target) {
             return mid;
         }
@@ -23,16 +23,15 @@ function defaultBinarySearch(nums, target) {
             }
         }
     }
-    console.log("hello");
     return -1;
 }
 function improveBinarySearch(nums, target) {
-    var start = 0;
-    var end = nums.length - 1;
+    let start = 0;
+    let end = nums.length - 1;
     return recursiveFunc(nums, target, start, end);
 }
 function recursiveFunc(nums, target, start, end) {
-    var mid = Math.floor((start + end) / 2);
+    let mid = Math.floor((start + end) / 2);
     if (nums[mid] === target) {
         return mid;
     }

@@ -1,8 +1,8 @@
 function sortArrayByParity2(nums) {
-    var temp = [];
-    var e = 0;
-    var o = 1;
-    for (var i = 0; i < nums.length; i++) {
+    const temp = [];
+    let e = 0;
+    let o = 1;
+    for (let i = 0; i < nums.length; i++) {
         if (!(nums[i] % 2)) {
             temp[e] = nums[i];
             e += 2;

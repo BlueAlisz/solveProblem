@@ -1,11 +1,9 @@
 function sortArrayByParity(nums) {
-    var _a;
-    var left = 0;
-    var right = 0;
-    console.log((2 % 2));
+    let left = 0;
+    let right = 0;
     for (; right < nums.length; right++) {
         if (!(nums[right] % 2)) {
-            _a = [nums[right], nums[left]], nums[left] = _a[0], nums[right] = _a[1];
+            [nums[left], nums[right]] = [nums[right], nums[left]];
             left++;
         }
     }
