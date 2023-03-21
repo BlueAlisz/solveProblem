@@ -2,7 +2,7 @@
 function findRotation(mat, target) {
     // Rotate matrix 90 degrees
     const rotate = (matrix) => matrix.map((row, i) => row.map((_, j) => matrix[matrix.length - 1 - j][i]));
-    console.log(mat.map((row, i) => row.map((_, j) => j)));
+    mat.map((row, i) => row.map((_, j) => console.log(j, mat.length - 1 - j, i)));
     const targetJsonStr = JSON.stringify(target);
     // It will be first check of initial matrix + 3 rotations
     let rotations = 4;

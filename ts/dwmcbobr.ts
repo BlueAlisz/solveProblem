@@ -4,7 +4,7 @@ function findRotation(mat: number[][], target: number[][]): boolean {
     const rotate = (matrix: number[][]): number[][] => matrix.map((row, i) =>
         row.map((_, j) => matrix[matrix.length - 1 - j][i])
     )
-    console.log(mat.map((row, i) => row.map((_, j) => j)))
+    mat.map((row, i) => row.map((_, j) => console.log(j,mat.length - 1 - j, i)))
     const targetJsonStr = JSON.stringify(target);
 
     // It will be first check of initial matrix + 3 rotations
